@@ -1,0 +1,156 @@
+html {
+    height: 100%;
+    width: 100%;
+
+    font-family: Cambria, Georgia, Arial;
+    color: white;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+}
+
+div {
+    padding: 20px;
+    max-width: 100%;
+
+    text-align: center;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+a:visited {
+    color: green;
+  }
+
+a:hover {
+    color: darkgreen;
+}
+
+#side_bar {
+    float: left;
+
+    width: 4in;
+    height: 100%;
+    background-color: black;
+}
+
+#profile {
+    max-width: 80%;
+    border-radius: 50%;
+}
+
+.contact_icon {
+    width: 22%;
+    
+    margin-bottom: 15px;
+
+    transition-duration: 0.2s;
+}
+
+.contact_icon:hover {
+    width: 35%;
+}
+
+button {
+    font-family: Cambria, Georgia, Arial;
+}
+
+.profile_button {
+    display: block;
+
+    transition-duration: 0.2s;
+
+    font-size: 17px;
+    color: black;
+
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+.profile_button:hover {
+    font-size: 27px;
+}
+
+#main_page {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+
+    float: right;
+    height: 100%;
+    background-color: #bf8480;
+    flex-grow: 1;
+}
+
+.school_logo {
+    max-width: 40%;
+}
+
+.floating_container_education {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating_container_general {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.pages {
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#about_me {
+    background-color: #36454F;
+}
+
+#education {
+    background-color: #D3D3D3;
+
+    color: black;
+
+    background-image: url(./images/light_bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#skills {
+    background-color: #36454F;
+}
+
+#languages {
+    background-color: #D3D3D3;
+
+    color: black;
+
+    background-image: url(./images/light_bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#contact {
+    background-color: #36454F;
+}
+
+#linkedin_contact {
+    color: white;
+}

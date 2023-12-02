@@ -29,6 +29,10 @@ h1 {
     font-size: 25px;
 }
 
+button {
+    font-family: Cambria, Georgia, Arial;
+}
+
 a:visited {
     color: green;
   }
@@ -37,7 +41,7 @@ a:hover {
     color: darkgreen;
 }
 
-#side_bar {
+#divSidebar {
     float: left;
 
     width: 4in;
@@ -45,12 +49,12 @@ a:hover {
     background-color: black;
 }
 
-#profile {
+#imgProfile {
     max-width: 80%;
     border-radius: 50%;
 }
 
-.contact_icon {
+img.contact {
     width: 22%;
     
     margin-bottom: 15px;
@@ -58,15 +62,11 @@ a:hover {
     transition-duration: 0.2s;
 }
 
-.contact_icon:hover {
+img.contact:hover {
     width: 35%;
 }
 
-button {
-    font-family: Cambria, Georgia, Arial;
-}
-
-.profile_button {
+button.profile {
     display: block;
 
     transition-duration: 0.2s;
@@ -78,11 +78,11 @@ button {
     margin-top: 8px;
 }
 
-.profile_button:hover {
+button.profile:hover {
     font-size: 27px;
 }
 
-#main_page {
+#divMainpage {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
@@ -93,35 +93,35 @@ button {
     flex-grow: 1;
 }
 
-.school_logo {
+img.icon.school {
     max-width: 40%;
 }
 
-.floating_container_education {
+div.floating.education {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.floating_container_general {
+div.floating.general {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
 }
 
-.pages {
+div.mainpage.subpage {
     height: fit-content;
 
     display: flex;
     flex-direction: column;
 }
 
-#about_me {
+#divAboutme, #divSkills, #divContact {
     background-color: #36454F;
 }
 
-#education {
+#divEducation, #divLanguages {
     background-color: #D3D3D3;
 
     color: black;
@@ -132,25 +132,6 @@ button {
     background-position: center;
 }
 
-#skills {
-    background-color: #36454F;
-}
-
-#languages {
-    background-color: #D3D3D3;
-
-    color: black;
-
-    background-image: url(./images/light_bg.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-}
-
-#contact {
-    background-color: #36454F;
-}
-
-#linkedin_contact {
+#anchorContactLinkedin {
     color: white;
 }

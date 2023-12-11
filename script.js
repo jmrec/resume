@@ -1,27 +1,60 @@
-function switchBackgrounds() {
-    elementsToChangeAppearance.forEach(function(element) {
-        let backgroundColor = element.style.backgroundColor;
+function showOrHide(element) {
+    const elementDisplay = element.style.display;
 
-        if (backgroundColor === "rgb(54, 69, 79)") {
-            element.style.backgroundColor = "#e6e6e6";
-            element.style.color = "black";
-        } else {
-            element.style.backgroundColor = "#36454F";
-            element.style.color = "white";
-        }
-    });
-    // let sideBarBackgroundColor = sideBar.style.backgroundColor;
-    // if (sideBarBackgroundColor === "black") {
-    //     sideBar.style.backgroundColor = "#e6e6e6";
-    //     sideBar.style.color = "black";
-    // } else {
-    //     sideBar.style.backgroundColor = "black";
-    //     sideBar.style.color = "white";
-    // }
+    if (elementDisplay === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none"
+    }
 }
 
-let imgProfile = document.querySelector("#imgProfile");
-let sideBar = document.querySelector("#divSidebar")
-let elementsToChangeAppearance = document.querySelectorAll(".toFlip");
+function elementSwitch(element, currentBg, darkBg, lightBg) {
+    const elementBgColor = element.style.backgroundColor;
 
-imgProfile.addEventListener("click", switchBackgrounds);
+    if (elementBgColor === currentBg) {
+        element.style.backgroundColor = lightBg;
+        element.style.color = "black";
+    } else {
+        element.style.backgroundColor = darkBg;
+        element.style.color = "white";
+    }
+}
+
+function switchBackgrounds() {
+    toChangeAppearance.forEach(function(element) {
+        const darkBg = "rgb(54, 69, 79)";
+        const darkBgHex = "#36454F";
+        const lightBgHex = "#d6d6d6";
+        elementSwitch(element, darkBg, darkBgHex, lightBgHex)
+    });
+
+    elementSwitch(profile, currentBg="black", darkBg="black", lightBg="#c9c9c9")
+
+    toChangeBgImage.forEach(function(element) {
+        const currentBg = element.style.backgroundImage;
+        const imgDarkBg = "url(./images/dark_bg.png)";
+        const imgLightBg = "url(./images/light_bg.jpg)";
+    
+        if (currentBg.indexOf("./images/dark_bg.png") != -1) {
+            element.style.backgroundImage = imgLightBg;
+            element.style.color = "black";
+            element.style["-webkit-text-stroke"] = "2px white";
+        } else {
+            element.style.backgroundImage = imgDarkBg;
+            element.style.color = "white";
+            element.style["-webkit-text-stroke"] = "2px black";
+        }
+    });
+}
+
+const imgSwitch = document.querySelector("#imgAppearanceSwitch");
+const profile = document.querySelector("#divProfile");
+const toChangeAppearance = document.querySelectorAll(".toFlip");
+const toChangeBgImage = document.querySelectorAll(".toFlipBg");
+
+imgSwitch.addEventListener("click", switchBackgrounds);
+
+const hamburger = document.querySelector("#imgHamburger");
+hamburger.addEventListener("click", () => {
+    showOrHide(profile);
+})

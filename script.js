@@ -38,11 +38,9 @@ function switchBackgrounds() {
         if (currentBg.indexOf("./images/dark_bg.png") != -1) {
             element.style.backgroundImage = imgLightBg;
             element.style.color = "black";
-            element.style["-webkit-text-stroke"] = "2px white";
         } else {
             element.style.backgroundImage = imgDarkBg;
             element.style.color = "white";
-            element.style["-webkit-text-stroke"] = "2px black";
         }
     });
 }
